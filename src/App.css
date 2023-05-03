@@ -1,0 +1,32 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Roboto",sans-serif;
+}
+.header{
+    height: 100px;
+    background-color: rgb(30,30,30);
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.header > img{
+    height: 100%;
+}
+.header > div{
+   
+    width: 100%;
+    margin-left: 4vmax;
+    justify-content: space-between;
+}
+.header > svg{
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.header > a{
+    margin: 1vmax;
+}
