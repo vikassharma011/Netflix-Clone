@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <title>Nettoflikso</title>
+  </head>
+  <body class="relative">
+    <header class="w-100 pa2">
+      <h1
+        class="tc white br-pill bn grow bg-gray pa2 pl4 pr4 shadow w-fc center"
+        id="up"
+      >
+        Nettoflikso By VS
+      </h1>
+    </header>
+    <a href="#up" class="absolute fixed"  id="up-button">
+      <button class="br-100 pa2 bn shadow-1">
+        <img src="./Icons/up.svg" alt="Icon" />
+      </button>
+    </a>
+    <nav class="navbar navbar-expand-lg w-100">
+      <div class="container-fluid">
+        <a class="navbar-brand w-40 w-20-l" href="#">
+          <div class="search-bar bg-gray">
+            <img
+              src="./Icons/search.svg"
+              alt="Search Icon"
+              class="search-icon bg-transparent"
+            />
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search movies"
+            />
+          </div>
+        </a>
+        <button
+          class="navbar-toggler center"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse w-40 w-50-l"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav me-auto f4 mb-2 mb-lg-0 center">
+            <li class="nav-item">
+              <a class="nav-link" href="#movies">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#series">TV Series</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#animes">Anime</a>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand w-20" href="#">
+          <div class="user-profile">
+            <img src="./Rick.jpg" alt="User Logo" class="user-logo" />
+            <div class="user-info">
+              <div>MJ &nbsp;</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </nav>
+    <section
+      class="featured w-100 pa2 flex-l flex-row-l justify-between-l mb2 mt2"
+    >
+      <!-- New Trailers -->
+      <div class="w-20-l mr1-l mr1-m mb2 tv-shows mb2-l mb2-m pa1 pb0 br4">
+        <div class="w-100 flex flex-row justify-between">
+          <div class="d-inline-block w-fc">
+            <img src="./Icons/fire.png" alt="Company Logo" class="w1 h1" />
+            <t>New Trailers</t>
+          </div>
+          <sb class="gray">
+            Sort by:
+            <select class="bn bg-transparent white">
+              <option>Today</option>
+              <option>Week</option>
+              <option>Month</option>
+            </select>
+          </sb>
+        </div>
+        <div
+          class="trailers-container pl2 pr2 mt2 br4 w-100 pa0 overflow-y-scroll"
+        >
+          <div
+            class="trailer w-100 mb2 br4 flex flex-column justify-end"
+            id="op"
+          >
+            <div
+              class="showInfo pa1 pt0 pb0 tm br4 flex flex-row justify-between"
+            >
+              <h5 class="pa3">One Piece</h5>
+              <button class="playButton"><img src="./Icons/play.svg" /></button>
+            </div>
+          </div>
+          <div
+            class="trailer w-100 mb2 br4 flex flex-column justify-end"
+            id="rick"
+          >
+            <div
+              class="showInfo pt0 pb0 pa1 tm br4 flex flex-row justify-between"
+            >
+              <h5 class="pa3">Rick and Morty</h5>
+              <button class="playButton"><img src="./Icons/play.svg" /></button>
+            </div>
+          </div>
+          <div
+            class="trailer w-100 mb2 br4 flex flex-column justify-end"
+            id="topBoy"
+          >
+            <div
+              class="showInfo pt0 pb0 pa1 tm br4 flex flex-row justify-between"
+            >
+              <h5 class="pa3">Top Boy</h5>
+              <button class="playButton"><img src="./Icons/play.svg" /></button>
+            </div>
+          </div>
+          <div
+            class="trailer w-100 mb2 br4 flex flex-column justify-end"
+            id="titans"
+          >
+            <div
+              class="showInfo pt0 pb0 pa1 tm br4 flex flex-row justify-between"
+            >
+              <h5 class="pa3">Titans</h5>
+              <button class="playButton"><img src="./Icons/play.svg" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trending -->
+      <div
+        class="w-80-l movies mb2 pa2 br4 flex flex-column justify-between"
+        id="backgroundSection"
+      >
+        <div class="d-inline-block pt1 tm w-fc pl3 pr3 br-pill">
+          <img src="./Icons/fire.png" alt="Company Logo" class="w2 h2 mr1" />
+          <t>Trending Movies</t>
+        </div>
+
+        <div class="flex flex-column justify-between">
+          <div class="inline-flex">
+            <span class="pa1 mr1 pl4 pr4 bn br-pill w-fc" id="genre1"></span>
+            <span class="pa1 pl4 pr4 bn br-pill w-fc" id="genre2"></span>
+          </div>
+          <h2 class="w-50-l"></h2>
+          <p class="w-50-l moon-gray"></p>
+          <div
+            class="flex buttons w-100 w-90-l w-90-m flex-row justify-between-m justify-between-l white"
+          >
+            <div class="flex flex-row justify-between flex-shrink-0">
+              <button
+                class="flex flex-row justify-between pd-button pa2 pr3 pl3 br-pill bn white"
+                id="play-button"
+              >
+                <img src="./Icons/play.svg" id="play-icon" />
+                <l> &nbsp; &nbsp; Watch </l>
+              </button>
+              <button
+                class="flex flex-row justify-between pd-button pa2 pr3 pl3 br-pill bn white"
+                id="download-button"
+              >
+                <img src="./Icons/download.svg" id="download-icon" />
+                <l> &nbsp; &nbsp; Download </l>
+              </button>
+              <button class="bn br-100" id="more">
+                <img src="./Icons/menu.svg" />
+              </button>
+            </div>
+            <div class="pic-buttons flex flex-row">
+              <button id="prev-button"><img src="./Icons/left.svg" /></button>
+              <button id="next-button"><img src="./Icons/right.svg" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="watchRec mb2">
+      <div
+        class="watching flex flex-column pa2 pb0 br4 ml1"
+        style="height: 350px"
+      >
+        <h5>Continue Watching</h5>
+        <div class="trailers-container mt2 br4 w-100 pa0 pt2 overflow-y-scroll">
+          <div class="content-wrapper mb2 w-100">
+            <img
+              class="content-image"
+              src="./Movies/vikings.jpg"
+              alt="Vikings"
+            />
+            <div class="content-details">
+              <h6 class="f6">Vikings S3</h6>
+              <p class="f6">Episode 6</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="content-wrapper mb2 w-100">
+            <img
+              class="content-image"
+              src="./Movies/swagger.jpg"
+              alt="Vikings"
+            />
+            <div class="content-details">
+              <h6 class="f6">Swagger S2</h6>
+              <p class="f6">Episode 6</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="content-wrapper mb2 w-100">
+            <img class="content-image" src="./Movies/narcos.jpg" alt="Narcos" />
+            <div class="content-details">
+              <h6 class="f6">Narcos S2</h6>
+              <p class="f6">Episode 1</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="content-wrapper mb2 w-100">
+            <img
+              class="content-image"
+              src="./Movies/office.jpg"
+              alt="The Office"
+            />
+            <div class="content-details">
+              <h6 class="f6">The Office S1</h6>
+              <p class="f6">Episode 1</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="content-wrapper mb2 w-100">
+            <img class="content-image" src="./Movies/suits.jpg" alt="Suits" />
+            <div class="content-details">
+              <h6 class="f6">Suits S4</h6>
+              <p class="f6">Episode 5</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+          <div class="content-wrapper mb2 w-100">
+            <img
+              class="content-image"
+              src="./Movies/smallville.jpg"
+              alt="Smallville"
+            />
+            <div class="content-details">
+              <h6 class="f6">Smallville S1</h6>
+              <p class="f6">Episode 1</p>
+            </div>
+            <div class="play-button-container">
+              <img class="play-button-icon" src="./Icons/play.svg" alt="Play" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommend pa2 pb0">
+        <div class="w-100 flex flex-row justify-between">
+          <h5 id="movies">High Rated Movies</h5>
+          <p class="tm br-pill pl3 pr3">Show all</p>
+        </div>
+        <div
+          class="w-100 overflow-x-scroll pa1 flex flex-row flex-shrink-0 justify-between"
+        >
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="flash"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Fantasy</p>
+              <h5>The Flash (2023)</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 light-gray">
+                  Barry Allen goes back to the past...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="is"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Sci-fi</p>
+              <h5>Interstellar</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 dark-gray">
+                  A relationship between a father and his daughter...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="tg"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Drama</p>
+              <h5 class="gray">The Gentlemen</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 gray">
+                  A drug dealer wants to sell his business, but...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="topgun"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Thriller</p>
+              <h5>Top Gun</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 white">
+                  After 37 years, Tom Cruise comes back to...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="geostorm"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Sci-fi</p>
+              <h5>Geostorm</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 light-gray">
+                  When a weather machine goes rougue...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="insideout"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Animated</p>
+              <h5>Inside Out</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 light-gray">
+                  11 year old Riley moves to San Francisco...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="nfs"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Action</p>
+              <h5>Need for Speed</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70 light-gray">
+                  A street racer is framed by a rival...
+                </p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="movie br4 bg-transparent flex flex-column justify-end pa2"
+            id="bh6"
+          >
+            <div>
+              <p class="w-fc br-pill tm pa1 pl3 pr3">Animated</p>
+              <h5>Big Hero 6</h5>
+              <div class="inline-flex pl1 pr1 shadow">
+                <p class="w-70">Hiro, a robotics prodigy...</p>
+                <button class="playButton">
+                  <img src="./Icons/play.svg" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-100 flex flex-column justify-between pa2">
+      <div class="w-100 flex flex-row justify-between">
+        <h3 id="series">Series</h3>
+        <p class="tm br-pill pl3 pr3">Show all</p>
+      </div>
+      <div
+        class="w-100 shows pa3 flex flex-row justify-between overflow-x-scroll"
+      >
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="got"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Fantasy</p>
+            <h4>Game of Thrones</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                The Winds of Winter are coming and the Kingdoms will be overrun
+                with fire.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="sv"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Tech</p>
+            <h4 class="black bg-light-gray br4 w-fc pl2 pr2 pa1">Silicon Valley</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Richard, a programmer, creates an app called the Pied Piper and
+                tries to get investors for it.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="bb"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Thriller</p>
+            <h4>Breaking Bad</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Walter White, discovers that he has cancer and decides to get
+                into the meth-making business.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="pb"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Action</p>
+            <h4>Peaky Blinders</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Tommy Shelby, a dangerous man, leads the Peaky Blinders, a gang
+                based in Birmingham.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="snowfall"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Serial</p>
+            <h4>Snowfall</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                During the budding drug epidemic in LA in the 80's, a family
+                decides to make money selling cocaine.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent flex flex-column justify-end pa2"
+          id="ozark"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Drama</p>
+            <h4>Ozark</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Marty Byrde, a financial planner who relocates his family from
+                Chicago to the Ozarks to launder money.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="series br4 bg-transparent mr0 flex flex-column justify-end pa2"
+          id="punisher"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Thriller</p>
+            <h4 class="black bg-light-gray br4 tc">Marvel's The Punisher</h4>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Frank Castle seeks to take revenge and punish those who are
+                responsible for his tragedy.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-100 flex flex-column justify-between pa2">
+      <div class="w-100 flex flex-row justify-between">
+        <h3 id="animes">Anime</h3>
+        <p class="tm br-pill pl3 pr3">Show all</p>
+      </div>
+      <div
+        class="w-100 animes pa3 flex flex-row justify-between overflow-x-scroll"
+      >
+        <div
+          class="anime br4 bg-transparent flex flex-column justify-end pa2"
+          id="aot"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Thriller</p>
+            <h5>Attack on Titan</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Humanity is on the brink of extinction as giant humanoid
+                creatures known as Titans threaten their survival.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="anime br4 bg-transparent flex flex-column justify-end pa2"
+          id="naruto"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Adventure</p>
+            <h5 class="gray">Naruto</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Naruto Uzumaki, a young ninja journeys to be the strongest ninja
+                and the leader of his village.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="anime br4 bg-transparent flex flex-column justify-end pa2"
+          id="cg"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Psychological</p>
+            <h5>Code Geass</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Lelouch vi Britannia gains a mysterious power and uses it to
+                challenge the oppressive Britannian Empire and seek revenge.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="anime br4 bg-transparent flex flex-column justify-end pa2"
+          id="spyfam"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Drama</p>
+            <h5>Spy x Family</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                A spy, an assassin, and a telepath form an unconventional family
+                to complete a secret mission.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="anime br4 bg-transparent flex flex-column justify-end pa2"
+          id="steins"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Sci-fi</p>
+            <h5>Steins Gate</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70 dark-gray">
+                A group of friends accidentally invent a time machine, leading
+                to unexpected consequences.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="anime br4 bg-transparent mr0 flex flex-column justify-end pa2"
+          id="onepiece"
+        >
+          <div>
+            <p class="w-fc br-pill tm pa1 pl3 pr3">Adventure</p>
+            <h5>One Piece</h5>
+            <div class="flex flex-row justify-between pl1 pr1 shadow">
+              <p class="w-70">
+                Luffy and his pirate crew search for the legendary One Piece
+                treasure in a world filled with adventure and danger.
+              </p>
+              <button class="playButton w-20">
+                <img src="./Icons/play.svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark-gray white flex flex-column pa2 pb3 mt2 justify-between">
+      <h5 class="tc">Designed by Arfi Maulana</h5>
+      <h5 class="tc">Developed by Ahmad MJ</h5>
+      <div class="flex flex-row justify-around">
+        <p class="f4">© Ahmad MJ</p>
+        <p class="f4">2023</p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

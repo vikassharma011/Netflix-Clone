@@ -1,0 +1,425 @@
+body {
+  background: rgba(104, 102, 102, 0.445);
+  color: white;
+}
+.w-fc {
+  max-width: fit-content;
+}
+#up-button {
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+#up-button > button {
+  background: rgba(134, 127, 127, 0.704);
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 9999px;
+  padding: 5px;
+}
+.search-input {
+  flex: 1;
+  width: 80%;
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.search-input::placeholder {
+  color: white;
+  font-size: smaller;
+}
+.search-icon {
+  width: 20%;
+  height: 20px;
+  margin-right: 5px;
+}
+ul li a {
+  color: white !important;
+}
+ul li a:hover {
+  border: none;
+  background-color: lightgray;
+  border-radius: 9999px;
+  transition: 1s;
+}
+.user-profile {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+.user-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#backgroundSection {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 430px;
+  padding: 20px 20px 2px 20px;
+  transition: 1s;
+}
+.tv-shows {
+  background: rgba(161, 161, 161, 0.565);
+}
+.trailers-container {
+  max-height: 400px;
+}
+/* CSS for screens less than 600px */
+@media (max-width: 670px) {
+  .featured {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section > div {
+    width: 100%;
+  }
+  .trailer {
+    height: 250px !important;
+  }
+}
+@media (max-width: 970px) and (min-width: 600px) {
+  sb {
+    font-size: 0;
+  }
+}
+@media (max-width: 760px) {
+  .buttons {
+    font-size: 0;
+  }
+}
+@media (max-width: 370px) {
+  .buttons {
+    font-size: 0;
+    #more {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 671px) {
+  .featured {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tv-shows {
+    width: 25%;
+  }
+  .movies {
+    width: 70%;
+  }
+  /* .movies h1, .movies p{} */
+}
+
+h1,
+p {
+  color: inherit;
+}
+button {
+  margin: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.pd-button,
+#more {
+  border: 1px solid white;
+  background: transparent;
+}
+.pd-button:hover {
+  background: whitesmoke;
+  color: black;
+}
+#prev-button,
+#next-button {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(169, 169, 169, 0.602);
+  cursor: pointer;
+}
+.playButton {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  cursor: pointer;
+}
+
+#more,
+#genre1,
+#genre2,
+.tm {
+  background-color: rgba(70, 68, 68, 0.892);
+}
+#prev-button img,
+#next-button img {
+  width: 100%;
+  height: 100%;
+}
+.trailer {
+  height: 180px;
+}
+#topBoy {
+  background-image: url("./Movies/topboy.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center center; */
+}
+#op {
+  background-image: url("./Movies/onepiece.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#rick {
+  background-image: url("./Movies/rm.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#titans {
+  background-image: url("./Movies/titans.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+.content-image {
+  width: 25%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.content-details {
+  flex: 1;
+  width: 50%;
+}
+
+.play-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 10%;
+}
+.play-button-icon {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
+.watchRec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (min-width: 671px) {
+  .watching {
+    width: 30%;
+  }
+  .recommend {
+    max-width: 70%;
+  }
+  .series,
+  .anime {
+    width: 25% !important;
+    height: 300px;
+  }
+}
+
+@media (max-width: 855px) and (min-width: 600px) {
+  .movie {
+    height: 340px !important;
+    width: 40% !important;
+  }
+}
+@media (max-width: 580px) {
+  .anime,
+  .series {
+    width: 90% !important;
+  }
+  footer > div {
+    justify-content: space-between !important;
+  }
+}
+@media (max-width: 1100px) and (min-width: 581px) {
+  .anime,
+  .series {
+    width: 50% !important;
+  }
+}
+@media (max-width: 670px) {
+  .watchRec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .watching,
+  .recommend {
+    width: 100%;
+  }
+  .movie {
+    width: 70% !important;
+    height: 300px;
+    margin-right: 1%;
+    flex-shrink: 0;
+  }
+}
+.movie {
+  width: 30%;
+  height: 300px;
+  margin-right: 1%;
+  flex-shrink: 0;
+}
+.watching,
+.shows,
+.animes {
+  background: rgba(161, 161, 161, 0.565);
+}
+.series,
+.anime {
+  width: 40%;
+  height: 300px;
+  flex-shrink: 0;
+  margin-right: 1%;
+}
+#is {
+  background-image: url("./Movies/interstellar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#flash {
+  background-image: url("./Movies/flash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#geostorm {
+  background-image: url("./Movies/geo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#insideout {
+  background-image: url("./Movies/io.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#nfs {
+  background-image: url("./Movies/nfs.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#bh6 {
+  background-image: url("./Movies/bh6.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#tg {
+  background-image: url("./Movies/tg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#topgun {
+  background-image: url("./Movies/topgun.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#got {
+  background-image: url("./Movies/got.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#sv {
+  background-image: url("./Movies/siliconValley.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#bb {
+  background-image: url("./Movies/bb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#pb {
+  background-image: url("./Movies/pb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#snowfall {
+  background-image: url("./Movies/snowfall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+#ozark {
+  background-image: url("./Movies/ozark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#punisher {
+  background-image: url("./Movies/punisher.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#aot {
+  background-image: url("./Movies/aot.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#naruto {
+  background-image: url("./Movies/naruto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#cg {
+  background-image: url("./Movies/cg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#spyfam {
+  background-image: url("./Movies/spyxfam.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#steins {
+  background-image: url("./Movies/Steins.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#onepiece {
+  background-image: url("./Movies/op.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
